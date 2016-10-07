@@ -12,7 +12,7 @@ class FlashcardController {
     this.point = [];
 
   }
-  
+
   call_data() {
 
   }
@@ -33,11 +33,15 @@ class FlashcardController {
 
 class FlashcardView {
   constructor(args = {}) {
-    this.varr = args['varr'];
+
   }
+  start() {
+    return "### WELCOME TO TAMSYAN FLASHCARD ###";
+  }
+
 }
 
 let controller = new FlashcardController();
 let view = new FlashcardView();
 
-console.log(Flashcard.getData('deck.json'));
+console.log(Flashcard.getData('Deck.json'));
