@@ -12,6 +12,7 @@ class FlashcardController {
     this.point = [];
 
   }
+  
   call_data() {
 
   }
