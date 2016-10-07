@@ -10,23 +10,31 @@ class Flashcard {
 class FlashcardController {
   constructor(args = {}) {
     this.point = [];
-
+    this.answer = ""
+    this.current_soal = 0
   }
-  
-  call_data() {
 
-  }
   generate_soal() {
-
+    var soalsoal = Flashcard.getData()
+    var soal = soalsoal[this.current_soal]['definition']
+    this.current_soal += 1
+    return soal
   }
-  ask_input() {
 
-  }
   cek_answer() {
-
+    if (answer === data[i]['term']) {
+      this.point.push(4)
+    } else {
+      this.point.push(-1)
+    }
   }
-  scoring() {
 
+  scoring() {
+    var result = 0
+    for (var i = 0; i < this.point.length; i++) {
+      x = x + this.point[i]
+    }
+    return result
   }
 
 }
@@ -39,3 +47,4 @@ class FlashcardView {
 
 let controller = new FlashcardController();
 let view = new FlashcardView();
+console.log(controller.generate_soal())
