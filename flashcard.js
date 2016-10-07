@@ -53,6 +53,17 @@ class FlashcardView {
 let controller = new FlashcardController();
 let view = new FlashcardView();
 
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 for (var i = 0; i < Flashcard.getData().length; i++) {
-  view.soal();
+  rl.question(view.soal(), (answer) => {
+    console.log('Your answer is', answer);
+
+    rl.close();
+  });
 }
