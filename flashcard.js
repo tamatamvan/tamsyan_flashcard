@@ -8,13 +8,31 @@ class Flashcard {
 }
 
 class FlashcardController {
-  constructor(args={}) {
+  constructor(args = {}) {
+    this.point = [];
 
   }
+  
+  call_data() {
+
+  }
+  generate_soal() {
+
+  }
+  ask_input() {
+
+  }
+  cek_answer() {
+
+  }
+  scoring() {
+
+  }
+
 }
 
 class FlashcardView {
-  constructor(args={}) {
+  constructor(args = {}) {
     this.varr = args['varr'];
   }
 }
