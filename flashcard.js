@@ -15,10 +15,10 @@ class FlashcardController {
   }
 
   generate_soal() {
-    var soalsoal = Flashcard.getData()
-    var soal = soalsoal[this.current_soal]['definition']
-    this.current_soal += 1
-    return soal
+    var soalsoal = Flashcard.getData();
+    var soal = soalsoal[this.current_soal]['definition'];
+    this.current_soal += 1;
+    return soal;
   }
 
   cek_answer() {
@@ -41,10 +41,18 @@ class FlashcardController {
 
 class FlashcardView {
   constructor(args = {}) {
-    this.varr = args['varr'];
+
   }
+  soal() {
+    console.log(controller.generate_soal());
+  }
+
+
 }
 
 let controller = new FlashcardController();
 let view = new FlashcardView();
-console.log(controller.generate_soal())
+
+for (var i = 0; i < Flashcard.getData().length; i++) {
+  view.soal();
+}
