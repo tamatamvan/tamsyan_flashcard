@@ -45,12 +45,26 @@ class FlashcardController {
 
 class FlashcardView {
   constructor(args = {}) {
-    this.varr = args['varr'];
+
   }
+  start() {
+    console.log("SELAMAT DATANG DI TAMSYAN FLASHCARD GAME!");
+  }
+  soal() {
+    console.log(controller.generate_soal());
+  }
+
+
 }
 
 let controller = new FlashcardController();
 let view = new FlashcardView();
+
+view.start();
+for (var i = 0; i < Flashcard.getData().length; i++) {
+  view.soal();
+}
+
 
 //Driver
 console.log(controller.generate_soal())
