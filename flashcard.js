@@ -2,7 +2,7 @@ const fs = require('fs');
 
 class Flashcard {
   static getData(file) {
-    let deck = fs.readFileSync('deck.json');
+    let deck = fs.readFileSync(file);
     return JSON.parse(deck);
   }
 }
@@ -21,3 +21,5 @@ class FlashcardView {
 
 let controller = new FlashcardController();
 let view = new FlashcardView();
+
+console.log(Flashcard.getData('deck.json'));
