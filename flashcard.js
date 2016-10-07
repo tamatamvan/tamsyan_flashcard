@@ -43,6 +43,9 @@ class FlashcardView {
   constructor(args = {}) {
 
   }
+  start() {
+    console.log("SELAMAT DATANG DI TAMSYAN FLASHCARD GAME!");
+  }
   soal() {
     console.log(controller.generate_soal());
   }
@@ -52,18 +55,7 @@ class FlashcardView {
 
 let controller = new FlashcardController();
 let view = new FlashcardView();
-
-const readline = require('readline');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
+view.start();
 for (var i = 0; i < Flashcard.getData().length; i++) {
-  rl.question(view.soal(), (answer) => {
-    console.log('Your answer is', answer);
-
-    rl.close();
-  });
+  view.soal();
 }
