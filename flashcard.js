@@ -35,10 +35,6 @@ class FlashcardView {
   constructor(args = {}) {
 
   }
-  start() {
-    return "### WELCOME TO TAMSYAN FLASHCARD ###";
-  }
-
 }
 
 let controller = new FlashcardController();
